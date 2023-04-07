@@ -1,0 +1,23 @@
+{
+  "Title": "Rodent Racing League",
+  "Type": "game",
+  "Org": "tesa",
+  "Ident": "rrl",
+  "Tags": null,
+  "Schema": 1,
+  "HasAssets": true,
+  "AssetsPath": "",
+  "ResourcePaths": null,
+  "HasCode": true,
+  "CodePath": "code",
+  "Metadata": {
+    "MapList": [
+      "rrl-menu"
+    ],
+    "MinPlayers": 1,
+    "MapSelect": 1,
+    "RankType": 2,
+    "LeaderboardType": 1,
+    "PerMapRanking": true
+  }
+}
