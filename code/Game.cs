@@ -26,7 +26,7 @@ public partial class RRLGame : GameManager
     {
         Instance = this;
 
-        if (Game.Server.MapIdent != "")
+        if (Game.Server.MapIdent != "<empty>")
         {
             //
         }
