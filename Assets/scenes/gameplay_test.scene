@@ -1,0 +1,424 @@
+{
+  "__guid": "bfb616df-2d67-4128-8fa7-6a0060f5d362",
+  "GameObjects": [
+    {
+      "__guid": "871cd8e9-7e28-413d-8195-a61abc8ffa74",
+      "Flags": 0,
+      "Name": "Plane",
+      "Scale": "10,10,1",
+      "Tags": "solid",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "Sandbox.ModelRenderer",
+          "__guid": "09302c8a-ee6c-4bf2-8772-70917bb5d527",
+          "BodyGroups": 18446744073709551615,
+          "Model": "models/dev/plane.vmdl",
+          "RenderType": "On",
+          "Tint": "1,1,1,1"
+        },
+        {
+          "__type": "Sandbox.PlaneCollider",
+          "__guid": "92058802-a6a9-4774-a2a0-5a053702c388",
+          "Center": "0,0,0",
+          "IsTrigger": false,
+          "Scale": "100,100",
+          "Static": true
+        }
+      ]
+    },
+    {
+      "__guid": "ff5f4aaa-8b73-44e4-b8d5-92466854e6a5",
+      "Flags": 0,
+      "Name": "Sun",
+      "Position": "0,0,100",
+      "Rotation": "0,0.6087614,0,0.7933533",
+      "Tags": "light_directional,light",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "Sandbox.DirectionalLight",
+          "__guid": "bddfdfac-caa7-436f-b2b1-cd4f31c762af",
+          "FogMode": "Enabled",
+          "FogStrength": 1,
+          "LightColor": "0.91373,0.98039,1,1",
+          "Shadows": true,
+          "SkyColor": "0.05882,0.07451,0.08235,1"
+        }
+      ]
+    },
+    {
+      "__guid": "52c617d7-9e98-4aab-b46b-d3f5f690d82d",
+      "Flags": 0,
+      "Name": "2D Skybox",
+      "Tags": "skybox",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "Sandbox.SkyBox2D",
+          "__guid": "495f30b6-0981-423d-86de-06cb2bc000c8",
+          "SkyMaterial": "materials/skybox/skybox_day_01.vmat",
+          "Tint": "1,1,1,1"
+        }
+      ]
+    },
+    {
+      "__guid": "d22292a5-ff41-4d3d-8f72-ecb6bb6ed6e2",
+      "Flags": 0,
+      "Name": "Test Path",
+      "Enabled": true,
+      "Children": [
+        {
+          "__guid": "aac50103-b31d-44ac-b57b-32c375304592",
+          "Flags": 0,
+          "Name": "Start",
+          "Position": "-200,0,73.59998",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "TTP.Paths.StraightLinePath",
+              "__guid": "d8db4273-64ec-44a3-9fe2-dc6b4e48714f",
+              "Next": {
+                "_type": "component",
+                "component_id": "acbe1612-b44e-4222-ad31-bc72a4b4b5b3",
+                "go": "30bc5ee2-c136-4f29-a479-bc73c2bf6dd8",
+                "component_type": "QuadraticBezierPath"
+              },
+              "Previous": {
+                "_type": "component",
+                "component_id": "f792cfab-8cbf-4d0b-9cca-80ef2c80c64f",
+                "go": "9f2b8311-a9dd-42e1-8a5a-d592e258f1de",
+                "component_type": "QuadraticBezierPath"
+              },
+              "Resolution": 10,
+              "Width": 100
+            },
+            {
+              "__type": "Sandbox.RodentPathNode",
+              "__guid": "ebdbe21e-1f36-41e7-a665-05f85595b48e",
+              "Height": 100,
+              "Resolution": 100
+            }
+          ]
+        },
+        {
+          "__guid": "30bc5ee2-c136-4f29-a479-bc73c2bf6dd8",
+          "Flags": 0,
+          "Name": "GameObject",
+          "Position": "200,0,73.59998",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "TTP.Paths.QuadraticBezierPath",
+              "__guid": "acbe1612-b44e-4222-ad31-bc72a4b4b5b3",
+              "ControlPoint": {
+                "_type": "gameobject",
+                "go": "14d4f3de-dcaf-46a0-b343-18187531da62"
+              },
+              "Next": {
+                "_type": "component",
+                "component_id": "800c10ef-101d-4ade-9488-88d6a6d03e67",
+                "go": "d449402b-d2a0-4774-9bca-079bce9953a0",
+                "component_type": "QuadraticBezierPath"
+              },
+              "Previous": {
+                "_type": "component",
+                "component_id": "d8db4273-64ec-44a3-9fe2-dc6b4e48714f",
+                "go": "aac50103-b31d-44ac-b57b-32c375304592",
+                "component_type": "StraightLinePath"
+              },
+              "Resolution": 10,
+              "Width": 100
+            },
+            {
+              "__type": "Sandbox.RodentPathNode",
+              "__guid": "2e425396-35d2-4c25-ba97-021ff336bb84",
+              "Height": 100,
+              "Resolution": 200
+            }
+          ],
+          "Children": [
+            {
+              "__guid": "14d4f3de-dcaf-46a0-b343-18187531da62",
+              "Flags": 0,
+              "Name": "Control Point",
+              "Position": "200,0,0",
+              "Enabled": true
+            }
+          ]
+        },
+        {
+          "__guid": "d449402b-d2a0-4774-9bca-079bce9953a0",
+          "Flags": 0,
+          "Name": "GameObject",
+          "Position": "400,200,73.59998",
+          "Rotation": "0,0,0.7071068,0.7071068",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "TTP.Paths.QuadraticBezierPath",
+              "__guid": "800c10ef-101d-4ade-9488-88d6a6d03e67",
+              "ControlPoint": {
+                "_type": "gameobject",
+                "go": "77743011-2c45-4443-ab3f-bb31f99587de"
+              },
+              "Next": {
+                "_type": "component",
+                "component_id": "da3c948d-8f39-4c81-b1a5-253a352d309c",
+                "go": "dc85fd3a-ba59-42aa-8aeb-ef0d53453501",
+                "component_type": "StraightLinePath"
+              },
+              "Previous": {
+                "_type": "component",
+                "component_id": "acbe1612-b44e-4222-ad31-bc72a4b4b5b3",
+                "go": "30bc5ee2-c136-4f29-a479-bc73c2bf6dd8",
+                "component_type": "QuadraticBezierPath"
+              },
+              "Resolution": 10,
+              "Width": 100
+            },
+            {
+              "__type": "Sandbox.RodentPathNode",
+              "__guid": "15dab635-01aa-4397-aaf6-cac3f3dc1099",
+              "Height": 200,
+              "Resolution": 200
+            }
+          ],
+          "Children": [
+            {
+              "__guid": "77743011-2c45-4443-ab3f-bb31f99587de",
+              "Flags": 0,
+              "Name": "Control Point",
+              "Position": "200,0,0",
+              "Enabled": true
+            }
+          ]
+        },
+        {
+          "__guid": "dc85fd3a-ba59-42aa-8aeb-ef0d53453501",
+          "Flags": 0,
+          "Name": "GameObject",
+          "Position": "200,400,73.59998",
+          "Rotation": "0,0,1,-0.00000004371139",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "TTP.Paths.StraightLinePath",
+              "__guid": "da3c948d-8f39-4c81-b1a5-253a352d309c",
+              "Next": {
+                "_type": "component",
+                "component_id": "b69e1ea4-5ba4-4275-9c4f-8494e8cec4c3",
+                "go": "04a1b00e-f3ff-4686-91b5-5bb2dbfedb06",
+                "component_type": "QuadraticBezierPath"
+              },
+              "Previous": {
+                "_type": "component",
+                "component_id": "800c10ef-101d-4ade-9488-88d6a6d03e67",
+                "go": "d449402b-d2a0-4774-9bca-079bce9953a0",
+                "component_type": "QuadraticBezierPath"
+              },
+              "Resolution": 10,
+              "Width": 100
+            },
+            {
+              "__type": "Sandbox.RodentPathNode",
+              "__guid": "c7d88fb9-32c7-4813-b644-16d729e714d1",
+              "Height": 100,
+              "Resolution": 100
+            }
+          ]
+        },
+        {
+          "__guid": "04a1b00e-f3ff-4686-91b5-5bb2dbfedb06",
+          "Flags": 0,
+          "Name": "GameObject",
+          "Position": "-200,400,73.59998",
+          "Rotation": "0,0,1,-0.00000004371139",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "TTP.Paths.QuadraticBezierPath",
+              "__guid": "b69e1ea4-5ba4-4275-9c4f-8494e8cec4c3",
+              "ControlPoint": {
+                "_type": "gameobject",
+                "go": "32cbf9f1-8fcd-4cf2-9ad5-5421bad27592"
+              },
+              "Next": {
+                "_type": "component",
+                "component_id": "f792cfab-8cbf-4d0b-9cca-80ef2c80c64f",
+                "go": "9f2b8311-a9dd-42e1-8a5a-d592e258f1de",
+                "component_type": "QuadraticBezierPath"
+              },
+              "Previous": {
+                "_type": "component",
+                "component_id": "da3c948d-8f39-4c81-b1a5-253a352d309c",
+                "go": "dc85fd3a-ba59-42aa-8aeb-ef0d53453501",
+                "component_type": "StraightLinePath"
+              },
+              "Resolution": 10,
+              "Width": 100
+            },
+            {
+              "__type": "Sandbox.RodentPathNode",
+              "__guid": "bff7d1b6-59e0-434f-92a3-7ae3bbf04564",
+              "Height": 100,
+              "Resolution": 200
+            }
+          ],
+          "Children": [
+            {
+              "__guid": "32cbf9f1-8fcd-4cf2-9ad5-5421bad27592",
+              "Flags": 0,
+              "Name": "Control Point",
+              "Position": "200,-0.000004371139,0",
+              "Enabled": true
+            }
+          ]
+        },
+        {
+          "__guid": "9f2b8311-a9dd-42e1-8a5a-d592e258f1de",
+          "Flags": 0,
+          "Name": "GameObject",
+          "Position": "-400,200,73.59998",
+          "Rotation": "0,-0,-0.7071068,0.7071068",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "TTP.Paths.QuadraticBezierPath",
+              "__guid": "f792cfab-8cbf-4d0b-9cca-80ef2c80c64f",
+              "ControlPoint": {
+                "_type": "gameobject",
+                "go": "4fcf156a-41a9-4be3-bd12-80cffb79407a"
+              },
+              "Next": {
+                "_type": "component",
+                "component_id": "d8db4273-64ec-44a3-9fe2-dc6b4e48714f",
+                "go": "aac50103-b31d-44ac-b57b-32c375304592",
+                "component_type": "StraightLinePath"
+              },
+              "Previous": {
+                "_type": "component",
+                "component_id": "b69e1ea4-5ba4-4275-9c4f-8494e8cec4c3",
+                "go": "04a1b00e-f3ff-4686-91b5-5bb2dbfedb06",
+                "component_type": "QuadraticBezierPath"
+              },
+              "Resolution": 10,
+              "Width": 100
+            },
+            {
+              "__type": "Sandbox.RodentPathNode",
+              "__guid": "00496950-8e69-472d-9d30-da3d7fe2fe16",
+              "Height": 100,
+              "Resolution": 200
+            }
+          ],
+          "Children": [
+            {
+              "__guid": "4fcf156a-41a9-4be3-bd12-80cffb79407a",
+              "Flags": 0,
+              "Name": "Control Point",
+              "Position": "200,-0.000004371139,0",
+              "Enabled": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "__guid": "fd13f2a8-8949-441d-bd69-9215d1f0369b",
+      "Flags": 0,
+      "Name": "Camera",
+      "Position": "-592.5724,-564.6034,534.353",
+      "Rotation": "-0.1195137,0.2455831,0.4209494,0.8649896",
+      "Tags": "maincamera",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "Sandbox.CameraComponent",
+          "__guid": "f2413dda-e461-43ea-8990-be67e6447485",
+          "BackgroundColor": "0.33333,0.46275,0.52157,1",
+          "ClearFlags": "All",
+          "FieldOfView": 60,
+          "IsMainCamera": true,
+          "Orthographic": false,
+          "OrthographicHeight": 1204,
+          "Priority": 1,
+          "RenderExcludeTags": "",
+          "RenderTags": "",
+          "TargetEye": "None",
+          "Viewport": "0,0,1,1",
+          "ZFar": 10000,
+          "ZNear": 10
+        }
+      ]
+    },
+    {
+      "__guid": "a3519583-c469-4e68-8323-d07561daa019",
+      "Flags": 0,
+      "Name": "Path Follower",
+      "Position": "0,0,74.42735",
+      "Components": [
+        {
+          "__type": "Sandbox.RodentPathFollower",
+          "__guid": "8314965e-fe27-4ff9-9f10-fac191ab3837",
+          "First": {
+            "_type": "component",
+            "component_id": "ebdbe21e-1f36-41e7-a665-05f85595b48e",
+            "go": "aac50103-b31d-44ac-b57b-32c375304592",
+            "component_type": "RodentPathNode"
+          },
+          "Speed": 50
+        }
+      ],
+      "Children": [
+        {
+          "__guid": "9094da9f-1c33-46de-8057-8af6b2d92993",
+          "Flags": 0,
+          "Name": "hampter",
+          "Position": "0,0,0",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "Sandbox.SkinnedModelRenderer",
+              "__guid": "d40881cc-dc2c-4066-91da-9d72510a9ff1",
+              "BodyGroups": 18446744073709551615,
+              "CreateBoneObjects": false,
+              "Model": "models/hampter/hampter.vmdl",
+              "RenderType": "On",
+              "Tint": "1,1,1,1",
+              "UseAnimGraph": true
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "SceneProperties": {
+    "FixedUpdateFrequency": 50,
+    "MaxFixedUpdates": 5,
+    "NetworkFrequency": 30,
+    "NetworkInterpolation": true,
+    "ThreadedAnimation": true,
+    "TimeScale": 1,
+    "UseFixedUpdate": true,
+    "NavMesh": {
+      "Enabled": false,
+      "IncludeStaticBodies": true,
+      "IncludeKeyframedBodies": true,
+      "EditorAutoUpdate": true,
+      "AgentHeight": 64,
+      "AgentRadius": 16,
+      "AgentStepSize": 18,
+      "AgentMaxSlope": 40,
+      "ExcludedBodies": "",
+      "IncludedBodies": ""
+    }
+  },
+  "Title": "gameplay_test",
+  "Description": "",
+  "ResourceVersion": 1,
+  "__references": [
+    "fish.hs_hampter"
+  ],
+  "__version": 1
+}
